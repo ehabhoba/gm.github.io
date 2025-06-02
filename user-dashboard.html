@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المستخدم - صنايعي</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>صنايعي</h1>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="#">اطلب خدمة</a></li>
+                    <li><a href="#">انضم كصنايعي</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">تواصل معنا</a></li>
+                </ul>
+                <div class="auth-buttons">
+                    <a href="auth.html" class="btn primary-btn">تسجيل دخول</a>
+                    <a href="auth.html" class="btn secondary-btn">تسجيل جديد</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="user-dashboard-section">
+        <div class="container dashboard-container">
+            <aside class="sidebar">
+                <div class="user-info">
+                    <img src="images/client-placeholder.jpg" alt="صورة المستخدم" class="user-profile-img">
+                    <h3>أهلاً بك، [اسم المستخدم]</h3>
+                    <p class="user-email">user@example.com</p>
+                </div>
+                <nav class="dashboard-nav">
+                    <ul>
+                        <li class="active" data-section="my-requests">
+                            <a href="#"><i class="fas fa-list-alt"></i> طلباتي</a>
+                        </li>
+                        <li data-section="profile-settings">
+                            <a href="#"><i class="fas fa-user-circle"></i> ملفي الشخصي</a>
+                        </li>
+                        <li data-section="notifications">
+                            <a href="#"><i class="fas fa-bell"></i> الإشعارات <span class="badge">3</span></a>
+                        </li>
+                        <li data-section="payments">
+                            <a href="#"><i class="fas fa-credit-card"></i> المدفوعات</a>
+                        </li>
+                        <li>
+                            <a href="index.html"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main class="dashboard-content">
+                <div id="my-requests" class="dashboard-section active">
+                    <h2>طلباتي</h2>
+                    <p class="lead-text">تتبع حالة طلباتك للخدمات المختلفة.</p>
+                    <div class="requests-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>الصنايعي</th>
+                                    <th>الخدمة المطلوبة</th>
+                                    <th>تاريخ الطلب</th>
+                                    <th>الحالة</th>
+                                    <th>إجراء</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-request-id="1">
+                                    <td>محمود علي</td>
+                                    <td>إصلاح تسرب المياه</td>
+                                    <td>2024-05-20</td>
+                                    <td><span class="status pending">قيد الانتظار</span></td>
+                                    <td><a href="#" class="btn secondary-btn view-details-btn">عرض التفاصيل</a></td>
+                                </tr>
+                                <tr data-request-id="2">
+                                    <td>أحمد نجار</td>
+                                    <td>تركيب دولاب مطبخ</td>
+                                    <td>2024-05-15</td>
+                                    <td><span class="status completed">مكتمل</span></td>
+                                    <td><a href="#" class="btn secondary-btn view-details-btn">عرض التفاصيل</a></td>
+                                </tr>
+                                <tr data-request-id="3">
+                                    <td>كريم كهربائي</td>
+                                    <td>صيانة لوحة الكهرباء</td>
+                                    <td>2024-05-10</td>
+                                    <td><span class="status in-progress">قيد التنفيذ</span></td>
+                                    <td><a href="#" class="btn secondary-btn view-details-btn">عرض التفاصيل</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn primary-btn load-more-btn">تحميل المزيد من الطلبات</button>
+                </div>
+
+                <div id="profile-settings" class="dashboard-section">
+                    <h2>ملفي الشخصي</h2>
+                    <p class="lead-text">إدارة معلومات ملفك الشخصي.</p>
+                    <form class="profile-settings-form
+                    <input type="tel" id="user-phone" value="+201234567890">
+                        </div>
+                        <div class="form-group">
+                            <label for="user-address">العنوان:</label>
+                            <input type="text" id="user-address" placeholder="مثال: شقة 5، عمارة 10، شارع النصر، مدينة نصر">
+                        </div>
+                        <button type="submit" class="btn primary-btn">حفظ التغييرات</button>
+                    </form>
+                </div>
+
+                <div id="notifications" class="dashboard-section">
+                    <h2>الإشعارات</h2>
+                    <p class="lead-text">تلقى إشعارات حول حالة طلباتك، العروض الجديدة، والتحديثات.</p>
+                    <div class="notifications-list">
+                        <div class="notification-item unread">
+                            <i class="fas fa-info-circle"></i>
+                            <p>طلبك رقم #123456 (إصلاح تسرب المياه) قيد التنفيذ الآن مع محمود علي.</p>
+                            <span class="notification-date">منذ 10 دقائق</span>
+                        </div>
+                        <div class="notification-item">
+                            <i class="fas fa-check-circle"></i>
+                            <p>تم إكمال طلبك رقم #123455 (تركيب دولاب مطبخ) بواسطة أحمد نجار.</p>
+                            <span class="notification-date">منذ يوم</span>
+                        </div>
+                        <div class="notification-item unread">
+                            <i class="fas fa-star"></i>
+                            <p>يرجى تقييم خدمة كريم كهربائي لطلبك رقم #123454.</p>
+                            <span class="notification-date">منذ 3 أيام</span>
+                        </div>
+                    </div>
+                    <button class="btn secondary-btn mark-all-read-btn">تحديد الكل كمقروء</button>
+                </div>
+
+                <div id="payments" class="dashboard-section">
+                    <h2>المدفوعات</h2>
+                    <p class="lead-text">سجل مدفوعاتك ومعلومات الفواتير.</p>
+                    <div class="payments-table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>رقم الفاتورة</th>
+                                    <th>الخدمة</th>
+                                    <th>الصنايعي</th>
+                                    <th>التاريخ</th>
+                                    <th>المبلغ</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>INV-001</td>
+                                    <td>إصلاح تسرب المياه</td>
+                                    <td>محمود علي</td>
+                                    <td>2024-05-20</td>
+                                    <td>350 جنيه</td>
+                                    <td><span class="status paid">مدفوع</span></td>
+                                </tr>
+                                <tr>
+                                    <td>INV-002</td>
+                                    <td>تركيب دولاب مطبخ</td>
+                                    <td>أحمد نجار</td>
+                                    <td>2024-05-15</td>
+                                    <td>1200 جنيه</td>
+                                    <td><span class="status paid">مدفوع</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- Footer موحد -->
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>عن صنايعي</h4>
+                    <ul>
+                        <li><a href="#">من نحن</a></li>
+                        <li><a href="#">المدونة</a></li>
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>للعملاء</h4>
+                    <ul>
+                        <li><a href="#">كيف تطلب خدمة؟</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                        <li><a href="#">دعم العملاء</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>للصنايعية</h4>
+                    <ul>
+                        <li><a href="#">كيف تنضم إلينا؟</a></li>
+                        <li><a href="#">مزايا الصنايعي</a></li>
+                        <li><a href="#">الدعم الفني</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>تواصل معنا</h4>
+                    <p>البريد الإلكتروني: info@sanaiiplatform.com</p>
+                    <p>الهاتف: +201012345678</p>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 صنايعي. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
